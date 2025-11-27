@@ -17,6 +17,8 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.bytedance.ads.model.QianchuanUniPromotionAdControlTaskListV10FilteringHavingCost;
 import com.bytedance.ads.model.QianchuanUniPromotionAdControlTaskListV10FilteringTaskStatus;
+import com.bytedance.ads.model.QianchuanUniPromotionAdControlTaskListV10SmartBidType;
+import com.bytedance.ads.model.QianchuanUniPromotionAdControlTaskListV10ExternalAction;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -74,16 +76,24 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
   @SerializedName(SERIALIZED_NAME_TASK_STATUS)
   private QianchuanUniPromotionAdControlTaskListV10FilteringTaskStatus taskStatus = null;
 
+  public static final String SERIALIZED_NAME_SMART_BID_TYPE = "smart_bid_type";
+  @SerializedName(SERIALIZED_NAME_SMART_BID_TYPE)
+  private QianchuanUniPromotionAdControlTaskListV10SmartBidType smartBidType = null;
+
+  public static final String SERIALIZED_NAME_EXTERNAL_ACTION = "external_action";
+  @SerializedName(SERIALIZED_NAME_EXTERNAL_ACTION)
+  private QianchuanUniPromotionAdControlTaskListV10ExternalAction externalAction = null;
+
   public QianchuanUniPromotionAdControlTaskListV10Filtering() {
   }
 
   public QianchuanUniPromotionAdControlTaskListV10Filtering createEndTime(String createEndTime) {
-    
+
     this.createEndTime = createEndTime;
     return this;
   }
 
-   /**
+  /**
    * 任务结束时间，格式 2021-04-05 00:00:00
    * @return createEndTime
   **/
@@ -99,12 +109,12 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
 
 
   public QianchuanUniPromotionAdControlTaskListV10Filtering createStartTime(String createStartTime) {
-    
+
     this.createStartTime = createStartTime;
     return this;
   }
 
-   /**
+  /**
    * 任务开始时间，格式 2021-04-05 00:00:00
    * @return createStartTime
   **/
@@ -120,12 +130,12 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
 
 
   public QianchuanUniPromotionAdControlTaskListV10Filtering havingCost(QianchuanUniPromotionAdControlTaskListV10FilteringHavingCost havingCost) {
-    
+
     this.havingCost = havingCost;
     return this;
   }
 
-   /**
+  /**
    * Get havingCost
    * @return havingCost
   **/
@@ -141,15 +151,15 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
 
 
   public QianchuanUniPromotionAdControlTaskListV10Filtering searchKeyword(String searchKeyword) {
-    
+
     this.searchKeyword = searchKeyword;
     return this;
   }
 
-   /**
+  /**
    * 支持根据任务id/名称进行搜索
    * @return searchKeyword
-  **/
+   **/
   @javax.annotation.Nullable
   public String getSearchKeyword() {
     return searchKeyword;
@@ -162,15 +172,15 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
 
 
   public QianchuanUniPromotionAdControlTaskListV10Filtering taskStatus(QianchuanUniPromotionAdControlTaskListV10FilteringTaskStatus taskStatus) {
-    
+
     this.taskStatus = taskStatus;
     return this;
   }
 
-   /**
+  /**
    * Get taskStatus
    * @return taskStatus
-  **/
+   **/
   @javax.annotation.Nullable
   public QianchuanUniPromotionAdControlTaskListV10FilteringTaskStatus getTaskStatus() {
     return taskStatus;
@@ -179,6 +189,48 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
 
   public void setTaskStatus(QianchuanUniPromotionAdControlTaskListV10FilteringTaskStatus taskStatus) {
     this.taskStatus = taskStatus;
+  }
+
+
+  public QianchuanUniPromotionAdControlTaskListV10Filtering smartBidType(QianchuanUniPromotionAdControlTaskListV10SmartBidType smartBidType) {
+
+    this.smartBidType = smartBidType;
+    return this;
+  }
+
+  /**
+   * Get smartBidType
+   * @return smartBidType
+   **/
+  @javax.annotation.Nullable
+  public QianchuanUniPromotionAdControlTaskListV10SmartBidType getSmartBidType() {
+    return smartBidType;
+  }
+
+
+  public void setSmartBidType(QianchuanUniPromotionAdControlTaskListV10SmartBidType smartBidType) {
+    this.smartBidType = smartBidType;
+  }
+
+
+  public QianchuanUniPromotionAdControlTaskListV10Filtering externalAction(QianchuanUniPromotionAdControlTaskListV10ExternalAction externalAction) {
+
+    this.externalAction = externalAction;
+    return this;
+  }
+
+  /**
+   * 直播全域一键起量探索目标或直播全域-素材追投-控成本投放-优化目标
+   * @return externalAction
+   **/
+  @javax.annotation.Nullable
+  public QianchuanUniPromotionAdControlTaskListV10ExternalAction getExternalAction() {
+    return externalAction;
+  }
+
+
+  public void setExternalAction(QianchuanUniPromotionAdControlTaskListV10ExternalAction externalAction) {
+    this.externalAction = externalAction;
   }
 
 
@@ -193,15 +245,17 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
     }
     QianchuanUniPromotionAdControlTaskListV10Filtering qianchuanUniPromotionAdControlTaskListV10Filtering = (QianchuanUniPromotionAdControlTaskListV10Filtering) o;
     return Objects.equals(this.createEndTime, qianchuanUniPromotionAdControlTaskListV10Filtering.createEndTime) &&
-        Objects.equals(this.createStartTime, qianchuanUniPromotionAdControlTaskListV10Filtering.createStartTime) &&
-        Objects.equals(this.havingCost, qianchuanUniPromotionAdControlTaskListV10Filtering.havingCost) &&
-        Objects.equals(this.searchKeyword, qianchuanUniPromotionAdControlTaskListV10Filtering.searchKeyword) &&
-        Objects.equals(this.taskStatus, qianchuanUniPromotionAdControlTaskListV10Filtering.taskStatus);
+            Objects.equals(this.createStartTime, qianchuanUniPromotionAdControlTaskListV10Filtering.createStartTime) &&
+            Objects.equals(this.havingCost, qianchuanUniPromotionAdControlTaskListV10Filtering.havingCost) &&
+            Objects.equals(this.searchKeyword, qianchuanUniPromotionAdControlTaskListV10Filtering.searchKeyword) &&
+            Objects.equals(this.taskStatus, qianchuanUniPromotionAdControlTaskListV10Filtering.taskStatus) &&
+            Objects.equals(this.smartBidType, qianchuanUniPromotionAdControlTaskListV10Filtering.smartBidType) &&
+            Objects.equals(this.externalAction, qianchuanUniPromotionAdControlTaskListV10Filtering.externalAction);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(createEndTime, createStartTime, havingCost, searchKeyword, taskStatus);
+    return Objects.hash(createEndTime, createStartTime, havingCost, searchKeyword, taskStatus, smartBidType, externalAction);
   }
 
   @Override
@@ -213,6 +267,8 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
     sb.append("    havingCost: ").append(toIndentedString(havingCost)).append("\n");
     sb.append("    searchKeyword: ").append(toIndentedString(searchKeyword)).append("\n");
     sb.append("    taskStatus: ").append(toIndentedString(taskStatus)).append("\n");
+    sb.append("    smartBidType: ").append(toIndentedString(smartBidType)).append("\n");
+    sb.append("    externalAction: ").append(toIndentedString(externalAction)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -240,6 +296,8 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
     openapiFields.add("having_cost");
     openapiFields.add("search_keyword");
     openapiFields.add("task_status");
+    openapiFields.add("smart_bid_type");
+    openapiFields.add("external_action");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -250,48 +308,47 @@ public class QianchuanUniPromotionAdControlTaskListV10Filtering {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!QianchuanUniPromotionAdControlTaskListV10Filtering.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'QianchuanUniPromotionAdControlTaskListV10Filtering' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<QianchuanUniPromotionAdControlTaskListV10Filtering> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(QianchuanUniPromotionAdControlTaskListV10Filtering.class));
+      if (!QianchuanUniPromotionAdControlTaskListV10Filtering.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'QianchuanUniPromotionAdControlTaskListV10Filtering' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<QianchuanUniPromotionAdControlTaskListV10Filtering> thisAdapter
+              = gson.getDelegateAdapter(this, TypeToken.get(QianchuanUniPromotionAdControlTaskListV10Filtering.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<QianchuanUniPromotionAdControlTaskListV10Filtering>() {
-           @Override
-           public void write(JsonWriter out, QianchuanUniPromotionAdControlTaskListV10Filtering value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
+      return (TypeAdapter<T>) new TypeAdapter<QianchuanUniPromotionAdControlTaskListV10Filtering>() {
+        @Override
+        public void write(JsonWriter out, QianchuanUniPromotionAdControlTaskListV10Filtering value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
 
-           @Override
-           public QianchuanUniPromotionAdControlTaskListV10Filtering read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
+        @Override
+        public QianchuanUniPromotionAdControlTaskListV10Filtering read(JsonReader in) throws IOException {
+          JsonElement jsonElement = elementAdapter.read(in);
+          return thisAdapter.fromJsonTree(jsonElement);
+        }
 
-       }.nullSafe();
+      }.nullSafe();
     }
   }
 
- /**
-  * Create an instance of QianchuanUniPromotionAdControlTaskListV10Filtering given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of QianchuanUniPromotionAdControlTaskListV10Filtering
-  * @throws IOException if the JSON string is invalid with respect to QianchuanUniPromotionAdControlTaskListV10Filtering
-  */
+  /**
+   * Create an instance of QianchuanUniPromotionAdControlTaskListV10Filtering given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of QianchuanUniPromotionAdControlTaskListV10Filtering
+   * @throws IOException if the JSON string is invalid with respect to QianchuanUniPromotionAdControlTaskListV10Filtering
+   */
   public static QianchuanUniPromotionAdControlTaskListV10Filtering fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, QianchuanUniPromotionAdControlTaskListV10Filtering.class);
   }
 
- /**
-  * Convert an instance of QianchuanUniPromotionAdControlTaskListV10Filtering to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of QianchuanUniPromotionAdControlTaskListV10Filtering to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }
 }
-
